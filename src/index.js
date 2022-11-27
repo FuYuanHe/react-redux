@@ -25,15 +25,15 @@ let store = createStore(reducer)
 
 function render() {
   counterP.innerHTML = store.getState().number
-  add.addEventListener('clock',()=>{
-    store.dispatch({type:ADD})
-  })
-  odd.addEventListener('clock',()=>{
-    store.dispatch({type:ODD})
-  })
 }
 render()
-
+store.subscribe(render)
+add.addEventListener('click', () => {
+  store.dispatch({ type: ADD })
+})
+odd.addEventListener('click', () => {
+  store.dispatch({ type: ODD })
+})
 
 
 
