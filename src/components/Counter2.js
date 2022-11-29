@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
-import actions  from '../store/actions/counter1';
+import actions  from '../store/actions/counter2';
 import store from '../store'
 
 const bindActions = bindActionCreators(actions,store.dispatch)
@@ -9,12 +9,11 @@ console.log(bindActions);
 export default class Counter1 extends Component {
     constructor(props) {
         super(props)
-        console.log(store.getState());
-        this.state = store.getState().reducer1
+        this.state = store.getState().reducer2
     }
     componentDidMount(){
         this.unSub = store.subscribe(()=>{
-            this.setState(store.getState().reducer1)
+            this.setState(store.getState().reducer2)
         })
     }
     componentWillUnmount(){
