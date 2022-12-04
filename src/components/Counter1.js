@@ -6,12 +6,13 @@ class Counter1 extends Component {
     
     render() {
         // const modalRef = useRef(null)
-        const {add,odd,number} = this.props
+        const {add,odd,number,thunk} = this.props
         return (
             <div>
                 <p>{number}</p>
                 <button onClick={add}>增加</button>
                 <button onClick={odd}>减少</button>
+                <button onClick={thunk}>thunk</button>
             </div>
         )
     }

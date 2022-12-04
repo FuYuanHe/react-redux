@@ -1,5 +1,5 @@
-import reducer2 from "./counter1";
-import reducer1 from "./counter2";
+import reducer1 from "./counter1";
+import reducer2 from "./counter2";
 import {combineReducers} from '../../redux'
 let reducers = {
     reducer1,
