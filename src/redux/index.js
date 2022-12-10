@@ -1,3 +1,5 @@
 export {default as createStore} from './createStore'
 export {default as bindActionCreators} from './bindActionCreaters'
 export {default as combineReducers} from './combineReducers'
+export {default as compose} from './compose'
+export {default as applyMiddlewares} from './applyMiddlewares'
